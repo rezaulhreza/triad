@@ -7,7 +7,7 @@
 
 {% block content %}
 <h1 class="govuk-heading-xl">
-    Supplier Account Dashboard
+    Pharmacy Account Dashboard
          
           </h1>
   <div class="govuk-tabs" data-module="govuk-tabs">
@@ -16,43 +16,49 @@
     </h2>
     <ul class="govuk-tabs__list">
       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-        <a class="govuk-tabs__tab" href="#past-day">
+        <a class="govuk-tabs__tab" href="#stockmanage">
          Stock
         </a>
       </li>
       <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#past-week">
-          Orders
+        <a class="govuk-tabs__tab" href="#supplierorders">
+         Supplier Orders
         </a>
       </li>
       <li class="govuk-tabs__list-item">
-        <a class="govuk-tabs__tab" href="#past-month">
+        <a class="govuk-tabs__tab" href="#completed">
           Completed
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#customer">
+          Customer Orders
         </a>
       </li>
      
     </ul>
-    <div class="govuk-tabs__panel" id="past-day">
+    <div class="govuk-tabs__panel" id="stockmanage">
       <h2 class="govuk-heading-l">Manage Stock</h2>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">product id</th>
             <th scope="col" class="govuk-table__header">Product Name</th>
-            <th scope="col" class="govuk-table__header">Manufacturer</th>
+            <th scope="col" class="govuk-table__header">Supplier</th>
             <th scope="col" class="govuk-table__header">Current stock</th>
-            <th scope="col" class="govuk-table__header">Updated</th>
+            <th scope="col" class="govuk-table__header">Sold stock</th>
             <th scope="col" class="govuk-table__header">Action</th>
 
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">123</td>
-            <td class="govuk-table__cell">Goots</td>
-            <td class="govuk-table__cell">Sabina Chemicals</td>
+            <td class="govuk-table__cell">315</td>
+            <td class="govuk-table__cell">LFT kit</td>
+            <td class="govuk-table__cell">Gbar Chem</td>
             <td class="govuk-table__cell">25</td>
-            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell">20</td>
+            
             <td class="govuk-table__cell">
                 <a href="orderdetails.html"></a>
                 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -62,11 +68,12 @@
             </td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">123</td>
-            <td class="govuk-table__cell">Goots</td>
-            <td class="govuk-table__cell">Sabina Chemicals</td>
+            <td class="govuk-table__cell">315</td>
+            <td class="govuk-table__cell">LFT kit</td>
+            <td class="govuk-table__cell">Gbar Chem</td>
             <td class="govuk-table__cell">25</td>
-            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell">20</td>
+            
             <td class="govuk-table__cell">
                 <a href="orderdetails.html"></a>
                 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -76,11 +83,12 @@
             </td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">123</td>
-            <td class="govuk-table__cell">Goots</td>
-            <td class="govuk-table__cell">Sabina Chemicals</td>
+            <td class="govuk-table__cell">315</td>
+            <td class="govuk-table__cell">LFT kit</td>
+            <td class="govuk-table__cell">Gbar Chem</td>
             <td class="govuk-table__cell">25</td>
-            <td class="govuk-table__cell">31 January 2022</td>
+            <td class="govuk-table__cell">20</td>
+            
             <td class="govuk-table__cell">
                 <a href="orderdetails.html"></a>
                 <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
@@ -93,61 +101,58 @@
       </table>
   
     </div>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-      <h2 class="govuk-heading-l">Past week</h2>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="supplierorders">
+      <h2 class="govuk-heading-l">Order List</h2>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Order Id</th>
-            <th scope="col" class="govuk-table__header">Pharmacy Name</th>
+            <th scope="col" class="govuk-table__header">Product Name</th>
+            <th scope="col" class="govuk-table__header">Supplier Name</th>
             <th scope="col" class="govuk-table__header">Quantity Ordered</th>
             <th scope="col" class="govuk-table__header">Ordered Date</th>
-            <th scope="col" class="govuk-table__header">Action</th>
+         
 
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">698</td>
             <td class="govuk-table__cell">Goots</td>
-            <td class="govuk-table__cell">25</td>
-            <td class="govuk-table__cell">31 January 2022</td>
-            <td class="govuk-table__cell"> <a href="orderdetails.html"></a>
-                <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-               View Details
-              </button></td>
+            <td class="govuk-table__cell">Kiuta</td>
+            <td class="govuk-table__cell">31 </td>
+            <td class="govuk-table__cell">31 January 2022 </td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">698</td>
             <td class="govuk-table__cell">Goots</td>
-            <td class="govuk-table__cell">25</td>
-            <td class="govuk-table__cell">31 January 2022</td>
-            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-               View Details
-              </button></td>
+            <td class="govuk-table__cell">Kiuta</td>
+            <td class="govuk-table__cell">31 </td>
+            <td class="govuk-table__cell">31 January 2022 </td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell">123</td>
+            <td class="govuk-table__cell">698</td>
             <td class="govuk-table__cell">Goots</td>
-            <td class="govuk-table__cell">25</td>
-            <td class="govuk-table__cell">31 January 2022</td>
-            <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-               View Details
-              </button></td>
+            <td class="govuk-table__cell">Kiuta</td>
+            <td class="govuk-table__cell">31 </td>
+            <td class="govuk-table__cell">31 January 2022 </td>
           </tr>
+        
         </tbody>
       </table>
+
+      <form action="" method="post"></form>
   
     </div>
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
       <h2 class="govuk-heading-l">Past month</h2>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Order Id</th>
-            <th scope="col" class="govuk-table__header">Pharmacy Name</th>
-            <th scope="col" class="govuk-table__header">Quantity Sent</th>
-            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">Supplier Name</th>
+            <th scope="col" class="govuk-table__header">Quantity Received</th>
+            <th scope="col" class="govuk-table__header">Date Received</th>
             <th scope="col" class="govuk-table__header">Action</th>
 
           </tr>
@@ -230,5 +235,62 @@
     
   
     </div>
+
+
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="customer">
+        <h2 class="govuk-heading-l">Manage Customer Orders</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Order Id</th>
+              <th scope="col" class="govuk-table__header">Customer Name</th>
+              <th scope="col" class="govuk-table__header">Quantity</th>
+              <th scope="col" class="govuk-table__header">Collection Time</th>
+              <th scope="col" class="govuk-table__header">Action</th>
+  
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Goots</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                 <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    View Details
+                   </button></td>
+               </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Goots</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                 <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    View Details
+                   </button></td>
+               </tr>
+           <tr class="govuk-table__row">
+             <td class="govuk-table__cell">123</td>
+             <td class="govuk-table__cell">Goots</td>
+             <td class="govuk-table__cell">25</td>
+             <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+              <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                 View Details
+                </button></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">123</td>
+              <td class="govuk-table__cell">Goots</td>
+              <td class="govuk-table__cell">25</td>
+              <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+              <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                 View Details
+                </button></td>
+            </tr>
+          </tbody>
+        </table>
+      
+    
+      </div>
   </div>
   {% endblock %}
