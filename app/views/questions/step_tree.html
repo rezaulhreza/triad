@@ -13,43 +13,30 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Question tree</h1>
+      <h1 class="govuk-heading-xl">What is your name?
+      </h1>
 
       <form class="form" action="/questions/step_four" method="post">
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
 
-{{ govukRadios({
-  idPrefix: "step-tree",
-  name: "step-tree",
-  fieldset: {
-    legend: {
-      text: "Where do you live?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "england",
-      text: "England"
-    },
-    {
-      value: "scotland",
-      text: "Scotland"
-    },
-    {
-      value: "wales",
-      text: "Wales"
-    },
-    {
-      value: "northern-ireland",
-      text: "Northern Ireland"
-    }
-  ]
-}) }}
+      {{ govukInput({
+        label: {
+          text: "First name"
+        },
+        classes: "govuk-input--width-10",
+        id: "fname",
+        name: "fname"
+      }) }}
 
-        <!-- <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p> -->
+      {{ govukInput({
+        label: {
+          text: "Last name"
+        },
+        classes: "govuk-input--width-10",
+        id: "lname",
+        name: "lname"
+      }) }}
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
