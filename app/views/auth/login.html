@@ -1,0 +1,79 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK LFT Distribution System
+{% endblock %}
+
+{% block content %}
+<div class="govuk-cookie-banner " data-nosnippet role="region" aria-label="Cookies on [name of service]">
+    <div class="govuk-cookie-banner__message govuk-width-container">
+  
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-cookie-banner__heading govuk-heading-m">Cookies on LFT Distribution System</h2>
+  
+          <div class="govuk-cookie-banner__content">
+            <p class="govuk-body">We use some essential cookies to make this service work.</p>
+            <p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="govuk-button-group">
+        <button value="accept" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+          Accept analytics cookies
+        </button>
+        <button value="reject" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
+          Reject analytics cookies
+        </button>
+        <a class="govuk-link" href="#">View cookies</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+User Account Login
+     
+      </h1>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+            Enter your username
+          </label>
+        </h1>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
+            Enter your password
+          </label>
+        </h1>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+      </div>
+      <a href="\dashboard/supplier.html">
+      <button class="govuk-button" data-module="govuk-button">
+       Login
+      </button>
+    </a>
+
+      <p>
+        <a href="start.html">Create an account</a>
+      </p>
+
+      <h1 class="govuk-heading-xl">
+        Problems with login
+             
+              </h1>
+              <p>
+                <a href="start.html">I have forgotten my password</a>
+              </p>
+              <p>
+                <a href="start.html">Help</a>
+              </p>
+    </div>
+  </div>
+
+{% endblock %}
