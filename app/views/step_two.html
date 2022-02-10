@@ -13,13 +13,43 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Heading or question goes here</h1>
+      <h1 class="govuk-heading-xl">Question two</h1>
 
-      <form class="form" action="check-answers" method="post">
+      <form class="form" action="/step_tree" method="post">
 
-        <p>[Insert question content here]</p>
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
-        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+{{ govukRadios({
+  idPrefix: "what-is-your-name",
+  name: "what-is-your-name",
+  fieldset: {
+    legend: {
+      text: "What is your name?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "england",
+      text: "England"
+    },
+    {
+      value: "scotland",
+      text: "Scotland"
+    },
+    {
+      value: "wales",
+      text: "Wales"
+    },
+    {
+      value: "northern-ireland",
+      text: "Northern Ireland"
+    }
+  ]
+}) }}
+
+        <!-- <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p> -->
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
