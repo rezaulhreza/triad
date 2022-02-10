@@ -13,30 +13,38 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Question one</h1>
+      <h1 class="govuk-heading-xl">Question five</h1>
 
-      <form class="form" action="/step_two" method="post">
+      <form class="form" action="/questions/step_six" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
 
 {{ govukRadios({
-  idPrefix: "do-you-have-coronavirus-symptoms?",
-  name: "do you have coronavirus symptoms?",
+  idPrefix: "where-do-you-live",
+  name: "where-do-you-live",
   fieldset: {
     legend: {
-      text: "Do you have coronavirus symptoms?",
+      text: "Where do you live?",
       isPageHeading: true,
       classes: "govuk-fieldset__legend--l"
     }
   },
   items: [
     {
-      value: "yes",
-      text: "Yes"
+      value: "england",
+      text: "England"
     },
     {
-      value: "no",
-      text: "No"
+      value: "scotland",
+      text: "Scotland"
+    },
+    {
+      value: "wales",
+      text: "Wales"
+    },
+    {
+      value: "northern-ireland",
+      text: "Northern Ireland"
     }
   ]
 }) }}
