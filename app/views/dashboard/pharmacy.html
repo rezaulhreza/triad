@@ -51,6 +51,7 @@
             <th scope="col" class="govuk-table__header">Current stock</th>
             <th scope="col" class="govuk-table__header">Sold stock</th>
             <th scope="col" class="govuk-table__header">Action</th>
+            
 
           </tr>
         </thead>
@@ -148,7 +149,7 @@
   
     </div>
     <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
-      <h2 class="govuk-heading-l">Past month</h2>
+      <h2 class="govuk-heading-l">Completed Orders</h2>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
@@ -157,6 +158,7 @@
             <th scope="col" class="govuk-table__header">Quantity Received</th>
             <th scope="col" class="govuk-table__header">Date Received</th>
             <th scope="col" class="govuk-table__header">Action</th>
+            <th scope="col" class="govuk-table__header">Status</th>
 
           </tr>
         </thead>
@@ -168,7 +170,10 @@
             <td class="govuk-table__cell">31 January 2022</td>
             <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                View Details
-              </button></td>
+              </button>
+            </td>
+
+            
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">123</td>
@@ -202,6 +207,7 @@
             <th scope="col" class="govuk-table__header">Quantity</th>
             <th scope="col" class="govuk-table__header">Date</th>
             <th scope="col" class="govuk-table__header">Action</th>
+           
 
           </tr>
         </thead>
@@ -251,7 +257,7 @@
               <th scope="col" class="govuk-table__header">Collection Time</th>
               <th scope="col" class="govuk-table__header">Action</th>
               <th scope="col" class="govuk-table__header">Status</th>
-
+  
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -263,11 +269,16 @@
                  <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                     View Details
                    </button></td>
-                   <td class="govuk-table__cell"><button class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Complete
-                   </button></td>
+
+                   <td class="govuk-table__cell">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Mark as Completed
+                      </button>
+    
+                   </td>
                </tr>
-            <tr class="govuk-table__row">
+
+               <tr class="govuk-table__row">
                 <td class="govuk-table__cell">123</td>
                 <td class="govuk-table__cell">Goots</td>
                 <td class="govuk-table__cell">25</td>
@@ -275,32 +286,33 @@
                  <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
                     View Details
                    </button></td>
-                   <td class="govuk-table__cell"><button class="govuk-button govuk-button--primary" data-module="govuk-button">
-                    Complete
-                   </button></td>
+
+                   <td class="govuk-table__cell">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Mark as Completed
+                      </button>
+    
+                   </td>
                </tr>
-           <tr class="govuk-table__row">
-             <td class="govuk-table__cell">123</td>
-             <td class="govuk-table__cell">Goots</td>
-             <td class="govuk-table__cell">25</td>
-             <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
-              <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                 View Details
-                </button></td>
-                <td class="govuk-table__cell">COMPLETED</td>
+               <tr class="govuk-table__row">
+                <td class="govuk-table__cell">123</td>
+                <td class="govuk-table__cell">Goots</td>
+                <td class="govuk-table__cell">25</td>
+                <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
+                 <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    View Details
+                   </button></td>
 
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">123</td>
-              <td class="govuk-table__cell">Goots</td>
-              <td class="govuk-table__cell">25</td>
-              <td class="govuk-table__cell">31 January 2022, 02:53 pm</td>
-              <td class="govuk-table__cell"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">
-                 View Details
-                </button></td>
-                <td class="govuk-table__cell">COMPLETED</td>
+                   <td class="govuk-table__cell">
+                    <button disabled="disabled" aria-disabled="true" class="govuk-button govuk-button--disabled" data-module="govuk-button">
+                        Completed
+                      </button>
+    
+                   </td>
+               </tr>
 
-            </tr>
+          
+        
           </tbody>
         </table>
       
