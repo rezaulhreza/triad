@@ -33,6 +33,7 @@
     "gulp": "^4.0.0",
     "gulp-nodemon": "^2.5.0",
     "gulp-sass": "^5.0.0",
+    "html5-qrcode": "^2.1.6",
     "inquirer": "^8.2.0",
     "lodash": "^4.17.21",
     "marked": "^4.0.10",
