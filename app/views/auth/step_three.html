@@ -4,7 +4,9 @@
 {% block pageTitle %}
   Home – GOV.UK LFT Distribution System
 {% endblock %}
-
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
 {% block content %}
 {% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
 
@@ -14,7 +16,7 @@
 {% endset %}
 
 {{ govukCookieBanner({
-  ariaLabel: "Cookies on [name of service]",
+  ariaLabel: "Cookies on this service",
   messages: [
     {
       headingText: "Cookies on LFT DISTRIBUTION SYSTEM",
@@ -40,7 +42,7 @@
     }
   ]
 }) }}
-<form action="astep_one.html" method="post">
+<form action="/questions/step_one" method="post">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
@@ -58,9 +60,7 @@
       </button>
     </form>
 
-      <p>
-        <a href="start.html">Create an account</a>
-      </p>
+  
 
     </div>
   </div>
