@@ -1,0 +1,68 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Home – GOV.UK LFT Distribution System
+{% endblock %}
+
+{% block content %}
+{% from "govuk/components/cookie-banner/macro.njk" import govukCookieBanner %}
+
+{% set html %}
+  <p class="govuk-body">We use some essential cookies to make this service work.</p>
+  <p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+{% endset %}
+
+{{ govukCookieBanner({
+  ariaLabel: "Cookies on [name of service]",
+  messages: [
+    {
+      headingText: "Cookies on LFT DISTRIBUTION SYSTEM",
+      html: html,
+      actions: [
+        {
+          text: "Accept analytics cookies",
+          type: "button",
+          name: "cookies",
+          value: "accept"
+        },
+        {
+          text: "Reject analytics cookies",
+          type: "button",
+          name: "cookies",
+          value: "reject"
+        },
+        {
+          text: "View cookies",
+          href: "#"
+        }
+      ]
+    }
+  ]
+}) }}
+<form action="astep_one.html" method="post">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Enter your password
+      </h1>
+<p>Enter your password to log in.</p>
+      <div class="govuk-form-group">
+        </h1>
+        <input class="govuk-input" id="event-name" required name="event-name" type="password">
+      </div>
+  
+   
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+       Continue
+      </button>
+    </form>
+
+      <p>
+        <a href="start.html">Create an account</a>
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
