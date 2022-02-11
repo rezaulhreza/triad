@@ -13,20 +13,28 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Question two</h1>
+      <h1 class="govuk-heading-xl"></h1>
       <h2 class="govuk-heading-l">Sign in or create an account</h2>
       <p>Creating an account takes 2 minutes. It uses NHS login . You may already have NHS login, for example if you use the NHS App.</p>
 
 
-      <form class="form" action="/questions/step_tree" method="post">
+        <a href="/auth/register"><button class="govuk-button" data-module="govuk-button">Create account</button></a>
+        <a href="/auth/login"><button class="govuk-button govuk-button--secondary" data-module="govuk-button">Sing in</button></a>
+     
+        <form class="form" action="/url/of/next/page" method="post">
+        <a href="/questions/step_tree">Continue without an account</a>
+        </form>
 
 
 
+<<<<<<< HEAD
         <!-- <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p> -->
 
        <a href="/auth/register"> <button class="govuk-button" data-module="govuk-button">Create account</button> </a>
         <button class="govuk-button govuk-button--secondary"  data-module="govuk-button">Sign in</button>
       </form>
+=======
+>>>>>>> 2a6019ad7be2718fb4107254558a3533c124924d
 
     </div>
   </div>

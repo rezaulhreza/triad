@@ -10,44 +10,71 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Question four</h1>
+    <h1 class="govuk-heading-xl">Do you have access to an email address?</h1>
 
-      <form class="form" action="/questions/step_five" method="post">
+    <p>If you do not have an email address, you can use a family member or friend’s email address.</p>
+    <p>You need to access this email address later on to order the tests.</p> 
 
-        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    <form class="form" action="/questions/step_five" method="post">
 
-{{ govukRadios({
-  idPrefix: "where-do-you-live",
-  name: "where-do-you-live",
-  fieldset: {
-    legend: {
-      text: "Where do you live?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "england",
-      text: "England"
-    },
-    {
-      value: "scotland",
-      text: "Scotland"
-    },
-    {
-      value: "wales",
-      text: "Wales"
-    },
-    {
-      value: "northern-ireland",
-      text: "Northern Ireland"
-    }
-  ]
-}) }}
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+      
+      {% set emailHtml %}
+      {{ govukInput({
+        id: "contact-by-email",
+        name: "contact-by-email",
+        type: "email",
+        autocomplete: "email",
+        spellcheck: false,
+        classes: "govuk-!-width-one-half",
+        label: {
+          text: "Email address"
+        }
+      }) }}
+      {% endset -%}
+      
+      
+      {{ govukRadios({
+        idPrefix: "contact",
+        name: "contact",
+        fieldset: {
+          legend: {
+            text: "",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Select one option."
+        },
+        items: [
+          {
+            value: "email",
+            text: "Email",
+            conditional: { html: emailHtml }
+          },
+          
+          {
+            value: "no_email",
+            text: "No"
+            
+          }
+          
+        ]
+      }) }}    
+      
+      
+      
+      
+      
+      
+      
+
+
 
         <!-- <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p> -->
 

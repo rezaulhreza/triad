@@ -13,43 +13,71 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-xl">Question five</h1>
+      <h1 class="govuk-heading-xl">Do you have a mobile phone?</h1>
+      <p>We will use this in case we need to contact you about your order</p>
 
       <form class="form" action="/questions/step_six" method="post">
 
         {% from "govuk/components/radios/macro.njk" import govukRadios %}
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        
+        {% set phoneHtml %}
+        {{ govukInput({
+          id: "contact-by-phone",
+          name: "contact-by-phone",
+          type: "tel",
+          autocomplete: "tel",
+          classes: "govuk-!-width-one-third",
+          label: {
+            text: "Mobile number"
+          }
+        }) }}
+        {% endset -%}
+        
+                
+        {{ govukRadios({
+          idPrefix: "contact",
+          name: "contact",
+          fieldset: {
+            legend: {
+              text: "How would you prefer to be contacted?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          items: [
+            
+            {
+              value: "phone",
+              text: "Yes, I have a mobile phone number",
+              conditional: {
+                html: phoneHtml
+              }
+            },
+            {
+              value: "no",
+              text: "No, I do not have a mobile phone number"
+            }
+          ]
+        }) }}
 
-{{ govukRadios({
-  idPrefix: "where-do-you-live",
-  name: "where-do-you-live",
-  fieldset: {
-    legend: {
-      text: "Where do you live?",
-      isPageHeading: true,
-      classes: "govuk-fieldset__legend--l"
-    }
-  },
-  items: [
-    {
-      value: "england",
-      text: "England"
-    },
-    {
-      value: "scotland",
-      text: "Scotland"
-    },
-    {
-      value: "wales",
-      text: "Wales"
-    },
-    {
-      value: "northern-ireland",
-      text: "Northern Ireland"
-    }
-  ]
-}) }}
 
-        <!-- <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
