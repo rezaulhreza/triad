@@ -19,81 +19,31 @@
           </div>
         </div>
       </div>
-  
-      <div class="govuk-button-group">
-        <button value="accept" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
-          Accept analytics cookies
-        </button>
-        <button value="reject" type="button" name="cookies" class="govuk-button" data-module="govuk-button">
-          Reject analytics cookies
-        </button>
-        <a class="govuk-link" href="#">View cookies</a>
-      </div>
+
     </div>
   </div>
-
+<form action="/auth/step_two" method="post">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-Registration
-     
+        Enter your email address
       </h1>
 
       <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-            Enter your First Name
-          </label>
         </h1>
-        <input class="govuk-input" id="event-name" name="event-name" type="text">
+        <input class="govuk-input" id="event-name" name="event-name" required type="email">
       </div>
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-            Enter your Last Name
-          </label>
-        </h1>
-        <input class="govuk-input" id="event-name" name="event-name" type="text">
-      </div>
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-            Enter your Email Address
-          </label>
-        </h1>
-        <input class="govuk-input" id="event-name" name="event-name" type="text">
-      </div>
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-            Enter your password
-          </label>
-        </h1>
-        <input class="govuk-input" id="event-name" name="event-name" type="text">
-      </div>
-      <div class="govuk-form-group">
-        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="event-name">
-            Confirm your password
-          </label>
-        </h1>
-        <input class="govuk-input" id="event-name" name="event-name" type="text">
-      </div>
-      <a href="\dashboard/supplier.html">
-      <button class="govuk-button" data-module="govuk-button">
-       Register
+  
+   
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+       Continue
       </button>
-    </a>
+    </form>
 
       <p>
         <a href="start.html">Create an account</a>
       </p>
 
-      <h1 class="govuk-heading-xl">
-        Login
-             
-              </h1>
-              <p>
-                <a href="start.html">Login</a>
-              </p>
-              <p>
-                <a href="start.html">Help</a>
-              </p>
     </div>
   </div>
 
